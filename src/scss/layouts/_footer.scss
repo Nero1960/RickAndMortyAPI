@@ -1,0 +1,27 @@
+@use '../custom' as *;
+
+.footer{
+    .iconos{
+        width: 3rem;
+        filter: invert(100%);
+    }
+
+    .nav-link{
+        font-family: $fuenteEnlace !important;
+        color: $white!important;
+        &:hover{
+            color: red !important;
+        }
+
+        &.active{
+            color: red !important;
+        }
+    }
+
+    .agradecimiento{
+        @include media-breakpoint-up(md){
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}

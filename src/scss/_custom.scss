@@ -1,0 +1,46 @@
+//colores
+$negro: #000000;
+$verde: #39FF14;
+$morado: #9B30FF;
+$azul: #00BFFF;
+$amarillo: #FFFF00;
+
+//tipografías
+$fuenteHeading: 'Bangers', cursive;
+$fuentePrincipal: 'Roboto Condensed', sans-serif;
+$fuenteEnlace: 'Handjet', cursive;
+
+
+
+//variables Bootstrap
+$headings-font-family: $fuenteHeading;
+$font-family-base: $fuentePrincipal;
+
+
+$navbar-light-icon-color: #ffffff;
+$navbar-toggler-focus-width:  0;
+$navbar-toggler-border-radius: 0;
+
+$card-border-color: #ffffff;
+$card-bg: #212529;
+$card-color: #ffffff;
+
+$modal-content-bg: #212529;
+$modal-content-border-color:   #212529;
+$modal-header-border-color:  #212529;
+$btn-close-color: #ffffff;
+
+$toast-background-color: #212529;
+$toast-header-background-color: #212529;
+$toast-color: #e1e1e1;
+$toast-header-border-color:  #e1e1e1;
+
+
+$input-btn-focus-width: 0;
+$input-btn-focus-color: none;
+$input-btn-focus-blur:none;
+$input-btn-border-width: 0;
+$input-btn-focus-box-shadow: none;
+
+/*Importar bootstrap 5.3.1*/
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';

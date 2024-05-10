@@ -1,0 +1,16 @@
+@use '../custom' as *;
+
+.header{
+    
+    .nav-link{
+        font-family: $fuenteEnlace !important;
+        color: $negro !important;
+        &:hover{
+            color: red !important;
+        }
+
+        &.active{
+            color: red !important;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web dedicado a la serie de televisión 'Rick and Morty'. Encuentra información sobre los personajes, episodios y más.">
+    <title>Rick And Morty API</title>
+    
+    <!--preload-->
+    <link rel="preload" href="build/css/app.css" as="style">
+    <link rel="stylesheet" href="build/css/app.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bangers&family=Handjet&family=Roboto+Condensed:wght@400;700&display=swap" as="font" crossorigin="crossorigin">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Handjet&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <div class="container-fluid px-0">
+              <a class="navbar-brand fw-bold text-white ps-2" href="index.html" id="logo">[as]</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse bg-white" id="navbarNav">
+                <ul class="navbar-nav ps-2">
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase px-md-3 active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase px-md-3" href="buscar.html">Buscar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase px-md-3" href="favoritos.html">Favoritos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section class="mt-5 pt-md-3 video">
+        <h1 class="text-center text-white display-3 display-md-5 mb-0">Rick And Morty API</h1>
+        <p class="text-center text-white fs-5 fs-md-3 mt-0">Encuentra a tus personajes favoritos</p>
+
+        <div class="video-container">
+            <video src="build/video/04.mp4" autoplay loop muted></video>
+            <div class="icon-container">
+              <img src="build/img/21428161947-rick-and-morty-logo-png.webp" alt="logo">
+            </div>
+          </div>
+          
+
+    </section>
+
+    <main class="mt-5 container-xl">
+      <div class="d-flex justify-content-between mb-2 align-items-center">
+        <h2 class="text-white fs-2 m-0">Personajes</h2>
+        <a href="https://rickandmortyapi.com" target="_blank" class="text-white fs-5 text-uppercase">Rickandmortyapi</a>
+      </div>
+
+      <div class="row resultado" id="resultado"></div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-2 text-white" id="exampleModalLabel"></h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--Toast-->
+      <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="build/img/01.png" class="rounded me-2" alt="image toast" width="50" height="50" loading="lazy">
+            <strong class="me-auto text-uppercase text-white">RickAndMortyAPI</strong>
+            <small class="text-white">1 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body fw-bold"></div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer mt-5 bg-dark">
+      <h2 class="text-center text-white pt-5">Rick and Morty Api</h2>
+      <p class="text-center text-white agradecimiento  mb-0 px-2 px-md-0">Agradecemos a la API de Rick and Morty por proporcionar los datos que hacen posible esta experiencia. Los personajes, episodios, y todo el universo de Rick and Morty son creaciones fascinantes que nos inspiran a construir esta aplicación. Gracias a los desarrolladores y creadores que han hecho posible que podamos explorar este emocionante mundo. ¡Wubba Lubba Dub Dub!
+      </p>
+      <div class="d-flex justify-content-center mt-4 pb-3">
+        <a href="#">
+          <img src="build/img/facebook.svg" class="iconos px-2" alt="facebook">
+        </a>
+
+        <a href="#">
+          <img src="build/img/instagram.svg" class="iconos px-2" alt="instagram">
+        </a>
+
+        <a href="#">
+          <img src="build/img/github.svg" class="iconos px-2" alt="github">
+        </a>
+
+      </div>
+
+      <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid justify-content-center justify-content-xl-between align-items-center">
+          <div class="d-none d-xl-flex">
+            <div class="navbar-nav">
+              <a class="nav-link text-uppercase text-white text-center active" href="index.html">Inicio</a>
+              <a class="nav-link text-uppercase text-white text-center" href="buscar.html">Buscar</a>
+              <a class="nav-link text-uppercase text-white text-center" href="favoritos.html">Favoritos</a>
+            </div>
+          </div>
+
+          <p class="text-white fw-bold mb-0">Todos los derechos reservados 2023</p>
+        </div>
+      </nav>
+
+    </footer>
+
+    <script type="module" src="build/js/app.js"></script>
+    <script src="build/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
